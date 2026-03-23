@@ -84,6 +84,12 @@ https://github.com/GadeKuldeep/Red-Blue-Team-Lab-Setup
 ### 🟡 CyberDocii — Cybersecurity Documentation Platform
 
 A full-stack web application designed to organize structured cybersecurity documentation, research notes, and technical references.
+## 🎯 Use Cases
+
+- **CTF Write-ups** — Document challenge solutions step by step as you solve them
+- **Penetration Test Reports** — Structure recon → exploitation → post-exploitation workflows
+- **SOC Incident Documentation** — Log investigation steps with timestamped evidence
+- **Lab Setup Guides** — Build reproducible tutorials with command/output blocks
 
 **Tech Stack**
 
