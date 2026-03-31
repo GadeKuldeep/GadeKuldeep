@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00FFCC&size=22&center=true&vCenter=true&width=600&lines=Cybersecurity+Student;SOC+Analyst+in+Progress;Red+Team+%2F+Blue+Team;Threat+Detection+%7C+Offensive+Security"/>
+  <img src="https://readme-typing-svg.herokuapp.com?color=00FFCC&size=22&center=true&vCenter=true&width=600&lines=Cybersecurity+Student;SOC+Analyst+in+Progress;Red+Team+and+Blue+Team;Threat+Detection+and+Offensive+Security"/>
 </p>
 
 ---
@@ -27,13 +27,11 @@ This is not theory-driven learning — this is **lab-driven, attack-simulated, d
 
 ## ⚔️ CORE DOMAINS
 
-```yaml
 SOC Monitoring
 Threat Detection
 Network Exploitation
 Web Security
 Security Automation
-```
 
 ---
 
@@ -50,15 +48,24 @@ Security Automation
 ```mermaid
 graph TD
 A[Target Domain] --> B[Scanner Engine]
-B --> C[DNS | TLS | Ports | Headers]
-C --> D[Analysis]
-D --> E[Risk Score]
+
+B --> C[DNS Analysis]
+B --> D[TLS Analysis]
+B --> E[Port Scanning]
+B --> F[HTTP Headers]
+
+C --> G[Analysis Engine]
+D --> G
+E --> G
+F --> G
+
+G --> H[Risk Score]
 ```
 
-⚙️ Stack:
-`React | Node.js | FastAPI | MongoDB`
+⚙️ Stack:  
+React | Node.js | FastAPI | MongoDB
 
-🔗 [https://github.com/GadeKuldeep/AlertMatrix](https://github.com/GadeKuldeep/AlertMatrix)
+🔗 https://github.com/GadeKuldeep/AlertMatrix
 
 ---
 
@@ -72,20 +79,16 @@ D --> E[Risk Score]
 
 🖥️ Environment:
 
-```bash
-kali-linux (attacker)
-ubuntu-server (target)
-wazuh (SIEM)
+kali-linux (attacker)  
+ubuntu-server (target)  
+wazuh (SIEM)  
 dvwa (web vuln app)
-```
 
 🛠 Tools:
 
-```bash
 nmap metasploit sqlmap hydra nikto
-```
 
-🔗 [https://github.com/GadeKuldeep/Red-Blue-Team-Lab-Setup](https://github.com/GadeKuldeep/Red-Blue-Team-Lab-Setup)
+🔗 https://github.com/GadeKuldeep/Red-Blue-Team-Lab-Setup
 
 ---
 
@@ -99,24 +102,20 @@ nmap metasploit sqlmap hydra nikto
 
 📂 Structure:
 
-```bash
-Cryptography/
-Web_Exploitation/
-Reverse_Engineering/
-Forensics/
-Binary_Exploitation/
+Cryptography/  
+Web_Exploitation/  
+Reverse_Engineering/  
+Forensics/  
+Binary_Exploitation/  
 General_Skills/
-```
 
 🛠 Tools:
 
-```bash
 python bash wireshark burpsuite ghidra nmap metasploit
-```
 
 ⚠️ Legal Use Only — CTF & Lab Environments
 
-🔗 [https://github.com/GadeKuldeep](https://github.com/GadeKuldeep)
+🔗 https://github.com/GadeKuldeep
 
 ---
 
@@ -128,10 +127,10 @@ python bash wireshark burpsuite ghidra nmap metasploit
 + Pentest documentation
 ```
 
-⚙️ Stack:
-`React | Node.js | MongoDB`
+⚙️ Stack:  
+React | Node.js | MongoDB
 
-🔗 [https://github.com/GadeKuldeep/CyberDocii](https://github.com/GadeKuldeep/CyberDocii)
+🔗 https://github.com/GadeKuldeep/CyberDocii
 
 ---
 
@@ -150,21 +149,15 @@ python bash wireshark burpsuite ghidra nmap metasploit
 
 ### 🔐 Security
 
-```bash
 nmap metasploit burpsuite sqlmap hydra nikto wireshark wazuh
-```
 
 ### 💻 Development
 
-```bash
 python javascript node react express fastapi mongodb mysql
-```
 
 ### 🖥 Platforms
 
-```bash
 kali-linux ubuntu virtualbox git postman
-```
 
 ---
 
@@ -179,16 +172,14 @@ kali-linux ubuntu virtualbox git postman
 
 ## 🌐 CONNECT
 
-```bash
-LinkedIn: linkedin.com/in/kuldeep-gade-52598b2b0
+LinkedIn: linkedin.com/in/kuldeep-gade-52598b2b0  
 TryHackMe: tryhackme.com/p/gadekuldeep25
-```
 
 ---
 
 ## 🧬 PHILOSOPHY
 
-> "Understand the attack. Build the defense. Repeat until unbreakable."
+"Understand the attack. Build the defense. Repeat until unbreakable."
 
 ---
 
