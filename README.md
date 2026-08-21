@@ -1,261 +1,436 @@
-# Gade Kuldeep Sunil
+# KULDEEP GADE - Cybersecurity Operator Portfolio
 
-**Cybersecurity Student | SOC Operations | Threat Detection | Offensive Security**
-
-📍 Pune, India  
-
-🎓 B.E. Computer Engineering — Savitribai Phule Pune University (SPPU)
+**Status**: 🟢 Active | Open to SOC L1, VAPT, Threat Intelligence Roles  
+**Location**: Pune, Maharashtra, India  
+**Contact**: gadekuldeep25@gmail.com | +91 93093 81367  
 
 ---
 
-## About
+## 🎯 Executive Summary
 
-I’m a Computer Engineering student focused on **cybersecurity operations, threat detection, and offensive security techniques**.
+I'm a **final-year B.E. Computer Engineering (Cybersecurity) student** at JCOE Kuran, Pune with a **hands-on, lab-driven approach** to security operations, threat detection, and offensive security techniques.
 
-My approach to learning security is **hands-on and lab-driven**. Instead of only studying theory, I build environments where I can simulate attacks, detect threats, and analyze security events like a real SOC analyst.
+My expertise spans:
+- **SOC Operations**: Real-world SIEM monitoring (Wazuh), log analysis, incident investigation
+- **Network Defense**: Snort IDS tuning, custom rule writing, traffic forensics
+- **Offensive Security**: Web exploitation, reconnaissance, penetration testing
+- **Threat Hunting**: Malware analysis, PCAP investigation, behavioral detection
+- **Automation**: Python security tools, detection frameworks, custom integrations
 
-I maintain a **personal Red Team / Blue Team home lab** where I practice attack simulations, monitor alerts using SIEM tools, and document incidents in structured reports.
-
-My focus areas include:
-
-- SOC monitoring and incident analysis  
-
-- Threat detection and log investigation  
-
-- Network reconnaissance and exploitation  
-
-- Web vulnerability testing  
-
-- Security tooling and automation
-
-I actively practice cybersecurity challenges on **TryHackMe** and **PicoCTF** while continuing to expand my offensive and defensive security knowledge.
+**Philosophy**: *Understand the attack. Build the defense.*
 
 ---
 
-## Cybersecurity Projects
+## 📚 Education & Certifications
 
-### 🔴 AlertMatrix — Automated Domain Security Scanner
+**Degree**: B.E. Computer Engineering (Cybersecurity Specialization)  
+**University**: Savitribai Phule Pune University (SPPU)  
+**Graduation**: July 2027 (Final Year - 2026-27)
 
-A microservices-based security scanning platform that analyzes domains across multiple attack surfaces such as DNS configuration, SSL/TLS health, open ports, and HTTP security headers.
-
-The system generates **risk-scored security reports (0–100)** with severity levels and remediation recommendations.
-
-**Tech Stack**
-
-React (Vite)  
-
-Node.js / Express  
-
-Python / FastAPI  
-
-MongoDB  
-
-**Security Concepts**
-
-DNS security checks  
-
-TLS certificate analysis  
-
-Port scanning automation  
-
-OWASP-aligned security checks  
-
-Repository:  
-
-https://github.com/GadeKuldeep/AlertMatrix
+### Certifications Earned
+- ✅ **Cisco CyberOps Associate** - Network defense and SOC operations
+- ✅ **Junior Cybersecurity Analyst** - Cisco Networking Academy
+- ✅ **Introduction to Cybersecurity** - Cisco Networking Academy
+- ✅ **NPTEL Computer Networks** - Advanced networking fundamentals
+- ✅ **NPTEL Programming in Java** - Software development
 
 ---
 
-### 🔵 Red-Blue-Team-Lab-Setup — Cybersecurity Home Lab
+## 🔧 Technical Skill Breakdown
 
-A personal **Red Team vs Blue Team cybersecurity lab** built using VirtualBox that simulates real attack scenarios and SOC monitoring workflows.
+### SIEM & Threat Detection
+- **Wazuh**: Advanced architecture, custom rule writing, MITRE ATT&CK mapping, alert tuning
+- **Snort IDS**: Complex rule syntax (PCRE, byte_test, stateful flow), threshold tuning, traffic analysis
 
-The Red Team performs attacks using common penetration testing tools, while the Blue Team monitors alerts and documents incidents using a SIEM platform.
+### Network & Forensics
+- **Wireshark**: Advanced packet inspection, malware PCAP analysis, TCP flow investigation
+- **tcpdump**: Network traffic capture and filtering
+- **Network Security**: DNS security, TLS/SSL analysis, port scanning, reconnaissance
 
-**Lab Components**
+### Penetration Testing & Exploitation
+- **Burp Suite**: Web application security testing, automated scanning, manual exploitation
+- **Metasploit**: Post-exploitation, payload generation, multi-stage attacks
+- **Nmap**: Advanced scanning, service enumeration, OS fingerprinting
+- **SQLmap**: SQL injection automation and database extraction
+- **Nikto**: Web server vulnerability scanning
 
-Kali Linux (Attacker machine)  
+### Credential Testing & Simulation
+- **Hydra**: Brute-force credential testing
+- **John the Ripper**: Password cracking and hash analysis
+- **GoPhish**: Phishing simulation and awareness testing
 
-Ubuntu Server (Target system)  
+### Programming & Automation
+- **Python**: Custom security tools, socket programming, threat detection automation
+- **Bash**: System administration, log analysis, security scripting
+- **JavaScript/Node.js**: Web security, security tools development
+- **FastAPI**: REST API development for security platforms
 
-Wazuh SIEM for monitoring and alerting  
-
-DVWA for web exploitation practice  
-
-**Tools Used**
-
-Nmap  
-
-Metasploit  
-
-SQLmap  
-
-Hydra  
-
-Nikto  
-
-Every attack scenario is documented with structured **incident response reports**.
-
-Repository:  
-
-https://github.com/GadeKuldeep/Red-Blue-Team-Lab-Setup
-
----
-
-### 🟡 PicoCTF Writeups & Practice
-
-A repository documenting my journey through Capture The Flag (CTF) challenges, focusing on practical cybersecurity skills, problem-solving, and real-world attack techniques.
-
-**Key Areas**
-
-Cryptography  
-Web Exploitation  
-Reverse Engineering  
-Binary Exploitation  
-Forensics  
-General Skills  
-
-**Highlights**
-
-Structured challenge writeups  
-Step-by-step solutions  
-Tools and techniques used  
-Beginner-friendly reference for CTF learners  
-
-Repository:  
-
-https://github.com/GadeKuldeep/PicoCTF
+### Operating Systems & Infrastructure
+- **Linux/Ubuntu**: System hardening, log analysis, SIEM deployment
+- **Kali Linux**: Penetration testing platform, tool mastery
+- **Windows Security**: Event log analysis, PowerShell hardening, privilege escalation
+- **VirtualBox/VMware**: Lab architecture, network segmentation
 
 ---
 
-### 🟡 CyberDocii — Cybersecurity Documentation Platform
+## 🚀 Core Projects (Production-Ready)
 
-A full-stack web application designed to organize structured cybersecurity documentation, research notes, and technical references.
+### 1. 🔴🔵 RED-BLUE-TEAM-LAB-SETUP
+**GitHub**: https://github.com/GadeKuldeep/Red-Blue-Team-Lab-Setup
 
-## 🎯 Use Cases
+**Purpose**: Full-scale cybersecurity home lab simulating real SOC operations and attack scenarios.
 
-- **CTF Write-ups** — Document challenge solutions step by step as you solve them
+**Architecture**:
+- **Kali Linux VM (Red Team)**: Attacker machine with Metasploit, Nmap, SQLmap, Hydra, GoPhish
+- **Ubuntu Server VM (Blue Team)**: SIEM + IDS monitoring with Wazuh Manager + Snort
+- **Target Systems**: DVWA (web exploitation), vulnerable applications for testing
+- **Threat Simulation**: GoPhish phishing engine integrated with Wazuh webhooks for alerting
 
-- **Penetration Test Reports** — Structure recon → exploitation → post-exploitation workflows
+**Key Achievements**:
+- ✅ Wazuh-Snort integration with 10+ custom detection rules (IDs 80500-80511)
+- ✅ Debugged multi-part integration failure (`-A console` vs `-A fast` flag conflict + file permissions)
+- ✅ Custom Snort rule tuning with byte_test, PCRE regex, stateful flow analysis
+- ✅ Structured incident response reports for every attack scenario
+- ✅ MITRE ATT&CK technique mapping for all detection rules
+- ✅ Real-time alert correlation and escalation workflows
 
-- **SOC Incident Documentation** — Log investigation steps with timestamped evidence
+**Technologies Used**:
+- VirtualBox | Ubuntu | Kali Linux
+- Wazuh Manager & Agent | Snort IDS
+- GoPhish | DVWA
+- Custom Bash automation scripts
 
-- **Lab Setup Guides** — Build reproducible tutorials with command/output blocks
-
-**Tech Stack**
-
-React  
-
-Node.js / Express  
-
-MongoDB  
-
-Repository:  
-
-https://github.com/GadeKuldeep/CyberDocii
-
----
-
-## Certifications
-
-Cisco CyberOps Associate — Cisco Networking Academy  
-
-Junior Cybersecurity Analyst — Cisco Networking Academy  
-
-Introduction to Cybersecurity — Cisco Networking Academy  
-
-Java Programming — NPTEL
+**What I Learned**:
+- Production-grade SIEM deployment and tuning
+- Advanced IDS rule writing and optimization
+- Integration challenges and debugging methodologies
+- Incident response workflows and documentation
+- Purple team operations (attack + defense balance)
 
 ---
 
-## Technical Skills
+### 2. 🌐 NETWORK-TRAFFIC-ANALYSIS-LAB
+**GitHub**: https://github.com/GadeKuldeep/Network-Traffic-Analysis-Lab
 
-### Security Tools
+**Purpose**: Deep network forensics and packet-level threat detection capability.
 
-Nmap  
+**Key Focus Areas**:
+- **PCAP Analysis**: Malware traffic identification, command-and-control (C2) communication
+- **TCP/IP Investigation**: Flow analysis, anomaly detection, protocol violations
+- **Wireshark Mastery**: Custom filter creation, follow streams, dissector development
+- **Network Troubleshooting**: Connectivity issues diagnosis, latency analysis
+- **Forensic Timeline Reconstruction**: Building attack timelines from network data
 
-Metasploit  
+**Practical Investigations**:
+- ✅ Diagnosed Wazuh connectivity issues via packet capture (port 1514 unanswered SYN packets)
+- ✅ Analyzed multi-stage attack chains using PCAP evidence
+- ✅ Built Wireshark filter sets for common attack patterns (SQL injection, XSS, etc.)
+- ✅ Documented forensic methodology and evidence collection procedures
+- ✅ Created reusable packet analysis playbooks
 
-Burp Suite  
+**Technologies Used**:
+- Wireshark | tcpdump
+- Network packet analysis tools
+- Protocol inspection (TCP, UDP, DNS, HTTP, HTTPS)
+- Evidence documentation systems
 
-SQLmap  
-
-Hydra  
-
-Nikto  
-
-Wireshark  
-
-Wazuh SIEM  
-
-### Development
-
-Python  
-
-JavaScript  
-
-Node.js  
-
-React  
-
-Express  
-
-FastAPI  
-
-MongoDB  
-
-MySQL  
-
-### Platforms
-
-Kali Linux  
-
-Ubuntu Server  
-
-VirtualBox  
-
-Git  
-
-Postman  
+**What I Learned**:
+- Network protocol stack understanding
+- Malware behavior patterns in network traffic
+- Forensic evidence collection and preservation
+- Network troubleshooting methodologies
+- Real-world packet investigation scenarios
 
 ---
 
-## Cybersecurity Practice
+### 3. 🚩 PICO-CTF-WRITEUPS
+**GitHub**: https://github.com/GadeKuldeep/PicoCTF
 
-TryHackMe  
+**Purpose**: Documented solutions to Capture The Flag security challenges with methodology.
 
-PicoCTF  
+**Challenge Categories Mastered**:
+- **Cryptography**: Hash functions, symmetric/asymmetric encryption, key exchange protocols
+- **Web Exploitation**: SQL injection, XSS (reflected/stored/DOM), IDOR, insecure deserialization, SSTI
+- **Reverse Engineering**: Binary analysis, disassembly, obfuscation techniques, code flow analysis
+- **Binary Exploitation**: Buffer overflows, ROP chains, ASLR bypasses, heap exploitation
+- **Forensics**: Memory analysis, log file investigation, data carving, image analysis
+- **General Skills**: Linux fundamentals, command-line operations, tool proficiency
 
-CTF challenges  
+**Documentation Approach**:
+- ✅ Step-by-step challenge walkthroughs with explanations
+- ✅ Tool usage examples (GDB, IDA Pro, Burp Suite, strings, objdump, etc.)
+- ✅ Vulnerability explanation with real-world impact assessment
+- ✅ Beginner-friendly reference material for learning
+- ✅ Common pitfalls and troubleshooting tips
 
-Attack simulation labs  
-
-Security incident documentation
-
----
-
-## Current Focus
-
-Expanding my SOC home lab environment  
-
-Practicing web exploitation and network analysis challenges  
-
-Developing security automation tools  
-
-Preparing for deeper offensive security research
-
----
-
-## Connect
-
-LinkedIn  
-
-https://www.linkedin.com/in/kuldeep-gade-52598b2b0/
-
-TryHackMe  
-
-https://tryhackme.com/p/gadekuldeep25
+**What I Learned**:
+- Structured problem-solving methodology
+- Tool proficiency in offensive security
+- Security vulnerability exploitation techniques
+- Defensive mindset from attacker perspective
+- Documentation and knowledge sharing skills
 
 ---
 
-"Understand the attack. Build the defense."
+### 4. ⚙️ PYTHON-SECURITY-TOOLS
+**GitHub**: https://github.com/GadeKuldeep
+
+**Purpose**: Custom automation frameworks for security operations and threat detection.
+
+**Key Tools Built**:
+- **Log Analysis Framework**: Automated parsing and correlation of security logs
+- **Threat Detection Automation**: Rule-based detection with custom scoring algorithms
+- **Network Scanning Utilities**: Nmap-based reconnaissance automation
+- **Credential Testing Tools**: Hydra integration for security assessment
+- **SIEM Integration Scripts**: Custom connectors for data enrichment and alerting
+
+**Capabilities**:
+- ✅ Real-time log processing and analysis
+- ✅ Multi-source data correlation
+- ✅ Custom alert generation and escalation
+- ✅ Automated report generation
+- ✅ Integration with external security tools
+
+**Technologies Used**:
+- Python 3.8+ | FastAPI | Flask
+- Socket programming | imaplib (email forensics)
+- Data structures for threat modeling
+- Automation frameworks and scheduling
+
+**What I Learned**:
+- Security tool development best practices
+- API integration and data enrichment
+- Automation workflow design
+- Performance optimization for security tools
+- Scalability considerations for production systems
+
+---
+
+## 💼 Professional Experience
+
+### Data Analyst Internship
+**Company**: Technogrowth Software Solutions Pvt. Ltd.  
+**Duration**: December 2025 - February 2026  
+**Location**: Pune, India
+
+**Responsibilities**:
+- Data cleaning and preprocessing for analytics pipelines
+- Report generation and visualization
+- Business metrics analysis and interpretation
+- Database query optimization
+
+---
+
+## 🏆 Platform Engagement & Achievements
+
+### TryHackMe
+- **Rank**: 140,004 globally (**Top 6%** in competitive rankings)
+- **Status**: Platinum League participant
+- **Achievements**: 
+  - Completed 50+ hands-on security labs
+  - Hacker's Holiday event completion
+  - Room mastery in Windows security, forensics, SIEM tools
+  - Consistent learning and progression
+
+**Profile**: https://tryhackme.com/p/gadekuldeep25
+
+### GitHub Portfolio
+- **Active Development**: Regular commits to cybersecurity projects
+- **Portfolio Projects**: 10+ repositories with detailed documentation
+- **Community Contribution**: Open-source security tools
+- **Code Quality**: Well-documented, production-ready code
+
+**Profile**: https://github.com/GadeKuldeep
+
+### LinkedIn Professional Network
+- **Network**: Active engagement with cybersecurity professionals
+- **Content**: Lab achievements, security insights, threat hunting methodology
+- **Endorsements**: Wazuh, Snort, Network Security, Python, Cybersecurity
+- **Recommendations**: From instructors and security professionals
+
+**Profile**: https://linkedin.com/in/kuldeep-gade-52598b2b0
+
+---
+
+## 📋 Advanced Study Areas
+
+### SIEM & Threat Detection Mastery
+- ✅ **NIST Cybersecurity Framework (CSF)** - All 5 functions (Identify, Protect, Detect, Respond, Recover)
+- ✅ **Wazuh Architecture**: Agents, managers, API, integrations
+- ✅ **Custom Detection Rules**: Writing complex correlation rules
+- ✅ **MITRE ATT&CK Framework**: Technique mapping for detections
+- ✅ **Alert Tuning**: False positive reduction, severity calibration
+- ✅ **Log Collection**: Centralization, parsing, indexing strategies
+
+### Snort IDS Advanced Topics
+- ✅ **Rule Syntax Mastery**: From basics to advanced (PCRE, byte_test, stateful)
+- ✅ **Threshold Tuning**: Alert generation optimization
+- ✅ **Traffic Analysis**: Pattern recognition and anomaly detection
+- ✅ **Pre-processor Configuration**: Advanced traffic monitoring
+- ✅ **Custom Signatures**: Writing signatures for new threat patterns
+
+### Web Application Security (OWASP)
+- ✅ **SQL Injection**: Detection, exploitation, mitigation
+- ✅ **Cross-Site Scripting (XSS)**: Reflected, stored, DOM-based
+- ✅ **Insecure Direct Object References (IDOR)**: Authorization flaws
+- ✅ **Security Misconfiguration**: Server and application hardening
+- ✅ **Weak Authentication**: Password policies, session management
+- ✅ **Server-Side Template Injection (SSTI)**: Jinja2, Mako, ERB exploitation
+- ✅ **Juice Shop Assessment**: Complete penetration testing walkthrough
+
+### Windows Security Deep Dive
+- ✅ **Event Log Analysis**: Event IDs 4624, 4625, 4688, 4672, 7045, 4698
+- ✅ **PowerShell Logging**: Script block logging, execution policy hardening
+- ✅ **Registry Analysis**: Persistence mechanisms, configuration analysis
+- ✅ **Privilege Escalation**: Common vectors and exploitation techniques
+- ✅ **Group Policy**: Security baseline implementation
+
+### Network & Forensics Expertise
+- ✅ **Wireshark Advanced Filtering**: Complex filter syntax, stream following
+- ✅ **TCP/IP Protocol Analysis**: Deep protocol understanding
+- ✅ **Malware Traffic Identification**: Signature-based and behavioral detection
+- ✅ **Network Timeline Reconstruction**: Building attack narratives from evidence
+- ✅ **Incident Forensics**: Disk, memory, and network artifact analysis
+
+---
+
+## 🎯 Job Search & Career Strategy
+
+### Target Roles
+1. **SOC L1 Analyst**
+   - Log monitoring and real-time alerting
+   - Incident triage and initial investigation
+   - Alert tuning and false positive reduction
+   - Escalation to senior analysts
+
+2. **VAPT (Penetration Tester)**
+   - Web and network security assessment
+   - Vulnerability identification and exploitation
+   - Risk prioritization and remediation recommendations
+   - Report generation for non-technical stakeholders
+
+3. **Threat Intelligence Analyst**
+   - Malware analysis and reverse engineering
+   - Threat research and TTP investigation
+   - Intelligence report creation
+   - Indicator of Compromise (IOC) development
+
+### Target Companies
+- **Applied For**: Neumetric, Bureau Veritas, Veradigm, CyberXchange, Quick Heal
+- **Cold Outreach**: Deloitte, Capgemini, IBM, Accenture, TCS, Infosys, Wipro
+- **Platforms**: Internshala, LinkedIn, Naukri.com
+
+### Application Strategy
+- ✅ 20+ tailored resumes for different roles (SOC L1 vs VAPT vs Threat Intel)
+- ✅ Role-specific cover letters highlighting relevant projects
+- ✅ Portfolio-driven applications linking GitHub projects
+- ✅ Cold outreach emails to security teams at major firms
+- ✅ LinkedIn connection strategy with hiring managers
+
+---
+
+## 📊 Key Metrics & Statistics
+
+| Metric | Value |
+|--------|-------|
+| **Active Projects** | 10+ repositories on GitHub |
+| **Lab VMs** | 3-tier architecture (Attacker, Defender, Target) |
+| **Custom Detection Rules** | 15+ (Wazuh + Snort combined) |
+| **CTF Challenges Solved** | 50+ across multiple platforms |
+| **TryHackMe Rank** | Top 6% globally (140,004) |
+| **Years Cybersecurity Focus** | 2+ years continuous, self-directed learning |
+| **Certifications** | 5 (Cisco + NPTEL) |
+| **Programming Languages** | 4+ (Python, JavaScript, Bash, Java) |
+
+---
+
+## 🔗 Quick Links
+
+| Platform | URL |
+|----------|-----|
+| **GitHub** | https://github.com/GadeKuldeep |
+| **LinkedIn** | https://linkedin.com/in/kuldeep-gade-52598b2b0 |
+| **TryHackMe** | https://tryhackme.com/p/gadekuldeep25 |
+| **Email** | gadekuldeep25@gmail.com |
+| **Phone** | +91 93093 81367 |
+| **Portfolio (Live)** | See `index.html` file |
+
+---
+
+## 🚀 Next Goals & Milestones
+
+### Short-term (Next 3 Months)
+- ✅ Secure cybersecurity internship or entry-level role (SOC L1/VAPT)
+- ✅ Deploy interactive portfolio website (GitHub Pages)
+- ✅ Complete CompTIA A+ certification
+- ✅ Begin Security+ exam preparation
+
+### Medium-term (6-12 Months)
+- SOC L1 → Detection Engineer career progression
+- Advanced threat hunting certifications
+- Security+ certification completion
+- Active bug bounty program participation
+
+### Long-term (1-2 Years)
+- Purple Team Analyst specialization
+- Advanced incident response expertise
+- Security architecture understanding
+- Leadership in security operations team
+
+---
+
+## 💡 Core Philosophy
+
+> "Understand the attack. Build the defense."
+
+My approach to cybersecurity is built on five core principles:
+
+1. **Hands-On Practice**: Theory without lab work is incomplete. I build what I learn.
+2. **Structured Documentation**: Every discovery, challenge, and solution is recorded for future reference.
+3. **Continuous Evolution**: Security changes daily. I adapt, investigate, and stay current.
+4. **Purple Team Mindset**: To defend effectively, I must understand attacks deeply.
+5. **Knowledge Sharing**: The security community grows through shared learning and open-source contributions.
+
+---
+
+## 📝 Professional Summary
+
+I bring **2+ years of focused, self-directed cybersecurity study** with emphasis on **practical lab work** and **real-world application**. My projects demonstrate:
+
+- **Technical Depth**: Advanced SIEM/IDS configuration, custom detection rules, network forensics
+- **Problem-Solving**: Debugging complex integrations, analyzing attack chains, optimizing alerts
+- **Communication**: Clear documentation, structured incident reports, professional presentation
+- **Continuous Learning**: Regular skill updates, certification pursuit, active community participation
+
+I'm seeking a role where I can apply this knowledge **immediately** in a **dynamic security operations** environment.
+
+---
+
+## 📄 How to Use This Portfolio
+
+### For Job Applications
+1. **Reference in Cover Letter**: "My cybersecurity lab and projects are documented at [GitHub link]"
+2. **Share Portfolio Link**: Include the `index.html` portfolio URL in your application
+3. **Highlight Specific Projects**: Reference Red-Blue-Team-Lab for SOC roles, PicoCTF for VAPT roles
+4. **Show Real Work**: Use project descriptions to answer behavioral interview questions
+
+### For Interview Preparation
+1. **Project Deep-Dives**: Be ready to explain architecture, challenges, and solutions
+2. **Tool Mastery**: Demonstrate hands-on experience with Wazuh, Snort, Wireshark, Python
+3. **Attack Scenarios**: Walk through a real attack scenario from your lab
+4. **Decision-Making**: Explain your choices in tool selection, architecture, and detection rules
+
+### For Continuous Learning
+1. **Use as Reference**: Your projects are living documentation of what you've learned
+2. **Build Upon**: Extend projects with new technologies and methodologies
+3. **Share Knowledge**: Document and share your learning journey with the community
+
+---
+
+**Portfolio Created**: August 21, 2026  
+**Status**: 🟢 Ready for Job Applications  
+**Target Start Date**: Immediate (Internship or Full-Time Role)
+
+---
+
+*"The best way to predict the future is to build it."*
