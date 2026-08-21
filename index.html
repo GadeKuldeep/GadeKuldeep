@@ -1,786 +1,261 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KULDEEP GADE - Cybersecurity Operator</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            font-family: 'Courier New', monospace;
-            background: #000000;
-            color: #00ff88;
-            overflow-x: hidden;
-        }
-
-        /* ===== MATRIX BACKGROUND ===== */
-        .matrix-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, #0a0e27 0%, #000000 50%, #0a1428 100%);
-            z-index: -1;
-            opacity: 1;
-        }
-
-        .matrix-char {
-            position: absolute;
-            font-size: 14px;
-            color: #00ff88;
-            opacity: 0.1;
-            animation: matrixFall linear infinite;
-            text-shadow: 0 0 10px #00ff88;
-        }
-
-        @keyframes matrixFall {
-            0% { transform: translateY(-100vh); }
-            100% { transform: translateY(100vh); }
-        }
-
-        /* ===== SCANNER LINE ===== */
-        .scanner-line {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #00ff88, #ff006e, transparent);
-            animation: scan 4s linear infinite;
-            z-index: 100;
-            pointer-events: none;
-            box-shadow: 0 0 20px #00ff88, 0 0 40px #ff006e;
-        }
-
-        @keyframes scan {
-            0% { transform: translateY(-100vh); }
-            100% { transform: translateY(100vh); }
-        }
-
-        /* ===== MAIN CONTAINER ===== */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ===== HEADER SECTION ===== */
-        .header {
-            text-align: center;
-            margin-bottom: 80px;
-            position: relative;
-            animation: headerFadeIn 1.5s ease-out;
-        }
-
-        @keyframes headerFadeIn {
-            0% { opacity: 0; transform: translateY(-50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ===== GLITCH TEXT EFFECT ===== */
-        .glitch {
-            font-size: 72px;
-            font-weight: 900;
-            letter-spacing: 8px;
-            color: #00ff88;
-            text-shadow: 
-                -2px -2px 0 #ff006e,
-                2px 2px 0 #00d4ff,
-                0 0 30px #00ff88;
-            position: relative;
-            display: inline-block;
-            animation: glitch 0.3s infinite;
-        }
-
-        .glitch::before {
-            content: attr(data-text);
-            position: absolute;
-            left: -2px;
-            top: -2px;
-            width: 100%;
-            height: 100%;
-            color: #ff006e;
-            z-index: -1;
-            opacity: 0.8;
-            animation: glitch-before 0.3s infinite;
-            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 58%);
-        }
-
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            left: 2px;
-            top: 2px;
-            width: 100%;
-            height: 100%;
-            color: #00d4ff;
-            z-index: -1;
-            opacity: 0.8;
-            animation: glitch-after 0.3s infinite;
-            clip-path: polygon(0 58%, 100% 45%, 100% 100%, 0 100%);
-        }
-
-        @keyframes glitch {
-            0% { text-shadow: -2px -2px 0 #ff006e, 2px 2px 0 #00d4ff, 0 0 30px #00ff88; }
-            50% { text-shadow: -3px -3px 0 #ff006e, 3px 3px 0 #00d4ff, 0 0 40px #00ff88; }
-            100% { text-shadow: -2px -2px 0 #ff006e, 2px 2px 0 #00d4ff, 0 0 30px #00ff88; }
-        }
-
-        @keyframes glitch-before {
-            0% { clip-path: polygon(0 0, 100% 0, 100% 45%, 0 58%); }
-            20% { clip-path: polygon(0 10%, 100% 0, 100% 35%, 0 68%); }
-            40% { clip-path: polygon(0 5%, 100% 10%, 100% 50%, 0 48%); }
-            60% { clip-path: polygon(0 0, 100% 5%, 100% 40%, 0 65%); }
-            100% { clip-path: polygon(0 0, 100% 0, 100% 45%, 0 58%); }
-        }
-
-        @keyframes glitch-after {
-            0% { clip-path: polygon(0 58%, 100% 45%, 100% 100%, 0 100%); }
-            20% { clip-path: polygon(0 68%, 100% 35%, 100% 90%, 0 100%); }
-            40% { clip-path: polygon(0 48%, 100% 50%, 100% 95%, 0 50%); }
-            60% { clip-path: polygon(0 65%, 100% 40%, 100% 100%, 0 55%); }
-            100% { clip-path: polygon(0 58%, 100% 45%, 100% 100%, 0 100%); }
-        }
-
-        .subtitle {
-            font-size: 24px;
-            color: #00d4ff;
-            margin-top: 20px;
-            letter-spacing: 3px;
-            animation: subtitleFadeIn 1.8s ease-out;
-            text-shadow: 0 0 15px #00d4ff;
-        }
-
-        @keyframes subtitleFadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .role-line {
-            margin-top: 30px;
-            font-size: 14px;
-            letter-spacing: 2px;
-            color: #ff006e;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .status-dot {
-            width: 10px;
-            height: 10px;
-            background: #00ff88;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-            box-shadow: 0 0 15px #00ff88;
-        }
-
-        @keyframes pulse {
-            0%, 100% { 
-                opacity: 1;
-                transform: scale(1);
-                box-shadow: 0 0 15px #00ff88;
-            }
-            50% { 
-                opacity: 0.5;
-                transform: scale(1.3);
-                box-shadow: 0 0 30px #00ff88;
-            }
-        }
-
-        /* ===== PROFILE CARDS ===== */
-        .profile-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 80px;
-            animation: cardsSlideIn 2s ease-out;
-        }
-
-        @keyframes cardsSlideIn {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 968px) {
-            .profile-section {
-                grid-template-columns: 1fr;
-            }
-            .glitch {
-                font-size: 48px;
-                letter-spacing: 4px;
-            }
-        }
-
-        .cyber-card {
-            position: relative;
-            background: rgba(10, 14, 39, 0.9);
-            border: 2px solid #00ff88;
-            border-radius: 0;
-            padding: 35px;
-            backdrop-filter: blur(10px);
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 
-                0 0 20px rgba(0, 255, 136, 0.3),
-                inset 0 0 20px rgba(0, 255, 136, 0.1);
-        }
-
-        .cyber-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(from 0deg, transparent, #00ff88, transparent);
-            animation: spin 3s linear infinite;
-            opacity: 0;
-            z-index: -1;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .cyber-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.2), transparent);
-            animation: scanLines 3s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes scanLines {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-
-        .cyber-card:hover {
-            border-color: #ff006e;
-            transform: translateY(-10px);
-            box-shadow: 
-                0 15px 40px rgba(255, 0, 110, 0.5),
-                inset 0 0 20px rgba(255, 0, 110, 0.2),
-                0 0 30px #ff006e;
-        }
-
-        .cyber-card:hover::before {
-            opacity: 0.3;
-        }
-
-        .card-title {
-            font-size: 22px;
-            color: #00d4ff;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 1px solid #00ff88;
-            padding-bottom: 10px;
-            text-shadow: 0 0 10px #00d4ff;
-        }
-
-        .card-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .card-text {
-            font-size: 14px;
-            color: #a0ff88;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-
-        .skill-tag {
-            background: rgba(0, 255, 136, 0.15);
-            border: 1px solid #00ff88;
-            color: #00ff88;
-            padding: 6px 14px;
-            font-size: 11px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-tag::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 255, 136, 0.3);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        .skill-tag:hover {
-            border-color: #ff006e;
-            color: #ff006e;
-            box-shadow: 0 0 15px #00ff88;
-            transform: scale(1.1);
-        }
-
-        .skill-tag:hover::before {
-            left: 100%;
-        }
-
-        /* ===== PROJECTS SECTION ===== */
-        .projects-section {
-            margin-top: 100px;
-            animation: projectsSlideIn 2.2s ease-out;
-        }
-
-        @keyframes projectsSlideIn {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        .section-header {
-            font-size: 36px;
-            color: #00ff88;
-            text-shadow: 0 0 20px #00ff88;
-            margin-bottom: 50px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            border-left: 4px solid #ff006e;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .section-header::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 80px;
-            height: 2px;
-            background: linear-gradient(90deg, #ff006e, transparent);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-        }
-
-        .project-card {
-            position: relative;
-            background: rgba(15, 30, 60, 0.95);
-            border: 2px solid #00d4ff;
-            border-radius: 0;
-            padding: 30px;
-            cursor: pointer;
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-            overflow: hidden;
-            group: 1;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 212, 255, 0.2), transparent 80%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            pointer-events: none;
-        }
-
-        .project-card:hover::before {
-            opacity: 1;
-        }
-
-        .project-card:hover {
-            border-color: #ff006e;
-            transform: translateY(-15px) perspective(1200px) rotateX(8deg);
-            box-shadow: 
-                0 30px 60px rgba(255, 0, 110, 0.4),
-                0 0 40px rgba(0, 212, 255, 0.3),
-                inset 0 0 30px rgba(255, 0, 110, 0.1);
-        }
-
-        .project-icon {
-            font-size: 48px;
-            margin-bottom: 18px;
-            filter: drop-shadow(0 0 10px #00d4ff);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .project-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #ff006e;
-            margin-bottom: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px #ff006e;
-        }
-
-        .project-desc {
-            font-size: 13px;
-            color: #a0ff88;
-            line-height: 1.6;
-            margin-bottom: 18px;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .tech-badge {
-            font-size: 10px;
-            background: rgba(255, 0, 110, 0.15);
-            border: 1px solid #ff006e;
-            color: #ff006e;
-            padding: 4px 10px;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-
-        .tech-badge:hover {
-            background: rgba(255, 0, 110, 0.3);
-            box-shadow: 0 0 10px #ff006e;
-            transform: scale(1.05);
-        }
-
-        /* ===== FOOTER SECTION ===== */
-        .footer {
-            margin-top: 100px;
-            padding-top: 40px;
-            border-top: 2px solid rgba(0, 255, 136, 0.3);
-            text-align: center;
-            animation: footerFadeIn 2.4s ease-out;
-        }
-
-        @keyframes footerFadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .footer-title {
-            font-size: 16px;
-            color: #00ff88;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .contact-link {
-            color: #00ff88;
-            text-decoration: none;
-            font-size: 14px;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 8px 16px;
-            border: 1px solid rgba(0, 255, 136, 0.5);
-        }
-
-        .contact-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #ff006e;
-            transition: width 0.3s ease;
-        }
-
-        .contact-link:hover {
-            color: #ff006e;
-            border-color: #ff006e;
-            text-shadow: 0 0 10px #ff006e;
-        }
-
-        .contact-link:hover::after {
-            width: 100%;
-        }
-
-        .footer-info {
-            font-size: 12px;
-            color: #a0ff88;
-            letter-spacing: 1px;
-            margin-top: 30px;
-        }
-
-        .footer-info strong {
-            color: #00d4ff;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            .glitch {
-                font-size: 36px;
-                letter-spacing: 2px;
-            }
-
-            .subtitle {
-                font-size: 14px;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-links {
-                gap: 15px;
-            }
-        }
-
-        /* ===== CURSOR GLOW EFFECT ===== */
-        .cursor-glow {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(0, 255, 136, 0.3), transparent);
-            pointer-events: none;
-            z-index: 1000;
-            display: none;
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
-        }
-
-        body:hover .cursor-glow {
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <div class="matrix-bg" id="matrixBg"></div>
-    <div class="scanner-line"></div>
-    <div class="cursor-glow" id="cursorGlow"></div>
-
-    <div class="container">
-        <!-- HEADER -->
-        <div class="header">
-            <h1 class="glitch" data-text="KULDEEP GADE">KULDEEP GADE</h1>
-            <div class="subtitle">[ CYBER SECURITY OPERATOR ]</div>
-            <div class="role-line">
-                <div class="status-dot"></div>
-                <span>SOC ANALYST | VAPT SPECIALIST | THREAT HUNTER</span>
-                <div class="status-dot"></div>
-            </div>
-        </div>
-
-        <!-- PROFILE CARDS -->
-        <div class="profile-section">
-            <div class="cyber-card">
-                <div class="card-title">→ PROFILE</div>
-                <div class="card-content">
-                    <div class="card-text">
-                        <strong>B.E. Computer Engineering (Cybersecurity)</strong><br>
-                        SPPU | Final Year | Expected July 2027<br><br>
-                        Red Team | Blue Team | Purple Team Operations<br>
-                        Home Lab Architect | SIEM Specialist<br>
-                        Network Forensics & Threat Hunting Expert
-                    </div>
-                </div>
-            </div>
-
-            <div class="cyber-card">
-                <div class="card-title">→ CORE COMPETENCIES</div>
-                <div class="card-content">
-                    <div class="skill-tags">
-                        <span class="skill-tag">Wazuh SIEM</span>
-                        <span class="skill-tag">Snort IDS</span>
-                        <span class="skill-tag">Wireshark</span>
-                        <span class="skill-tag">Metasploit</span>
-                        <span class="skill-tag">Nmap</span>
-                        <span class="skill-tag">Burp Suite</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Kali Linux</span>
-                        <span class="skill-tag">GoPhish</span>
-                        <span class="skill-tag">Windows Security</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- PROJECTS SECTION -->
-        <div class="projects-section">
-            <h2 class="section-header">>> ACTIVE PROJECTS</h2>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">🔴🔵</div>
-                    <div class="project-title">RED-BLUE-TEAM-LAB</div>
-                    <div class="project-desc">
-                        Production-grade home lab: Wazuh SIEM + Snort IDS + DVWA + GoPhish integration. 10+ custom detection rules with MITRE ATT&CK mapping.
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-badge">VirtualBox</span>
-                        <span class="tech-badge">Ubuntu</span>
-                        <span class="tech-badge">Kali</span>
-                        <span class="tech-badge">Wazuh</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">🌐</div>
-                    <div class="project-title">NETWORK-TRAFFIC-ANALYSIS</div>
-                    <div class="project-desc">
-                        Deep packet forensics: PCAP analysis, malware traffic identification, TCP/IP investigation, Wazuh connectivity debugging.
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-badge">Wireshark</span>
-                        <span class="tech-badge">tcpdump</span>
-                        <span class="tech-badge">Forensics</span>
-                        <span class="tech-badge">Analysis</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">🚩</div>
-                    <div class="project-title">PICO-CTF-WRITEUPS</div>
-                    <div class="project-desc">
-                        Complete challenge solutions: Cryptography, Web Exploitation, Reverse Engineering, Binary Exploitation, Forensics.
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-badge">CTF</span>
-                        <span class="tech-badge">Security</span>
-                        <span class="tech-badge">Documentation</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">⚙️</div>
-                    <div class="project-title">PYTHON-SECURITY-TOOLS</div>
-                    <div class="project-desc">
-                        Custom automation frameworks: Log analysis, threat detection, network scanning, credential testing, SIEM integration.
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">FastAPI</span>
-                        <span class="tech-badge">Automation</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- FOOTER -->
-        <div class="footer">
-            <div class="footer-title">[ CONNECT ]</div>
-            <div class="contact-links">
-                <a href="https://github.com/GadeKuldeep" class="contact-link" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/kuldeep-gade-52598b2b0" class="contact-link" target="_blank">LinkedIn</a>
-                <a href="https://tryhackme.com/p/gadekuldeep25" class="contact-link" target="_blank">TryHackMe</a>
-                <a href="mailto:gadekuldeep25@gmail.com" class="contact-link">Email</a>
-            </div>
-            <div class="footer-info">
-                <strong>gadekuldeep25@gmail.com</strong> | <strong>+91 93093 81367</strong> | <strong>Pune, India</strong><br>
-                <span style="margin-top: 10px; display: block;">🟢 ACTIVE | OPEN TO OPPORTUNITIES</span>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Matrix background effect
-        const matrixBg = document.getElementById('matrixBg');
-        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-
-        function createMatrixChar() {
-            const char = document.createElement('div');
-            char.className = 'matrix-char';
-            char.textContent = chars[Math.floor(Math.random() * chars.length)];
-            char.style.left = Math.random() * 100 + '%';
-            char.style.top = -20 + 'px';
-            char.style.animationDuration = (10 + Math.random() * 10) + 's';
-            char.style.animationDelay = Math.random() * 5 + 's';
-            matrixBg.appendChild(char);
-            setTimeout(() => char.remove(), 20000);
-        }
-
-        setInterval(createMatrixChar, 200);
-
-        // Cursor glow effect
-        const cursorGlow = document.getElementById('cursorGlow');
-        document.addEventListener('mousemove', (e) => {
-            cursorGlow.style.left = (e.clientX - 20) + 'px';
-            cursorGlow.style.top = (e.clientY - 20) + 'px';
-        });
-
-        // Project card hover effect
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = ((e.clientX - rect.left) / rect.width) * 100;
-                const y = ((e.clientY - rect.top) / rect.height) * 100;
-                card.style.setProperty('--mouse-x', x + '%');
-                card.style.setProperty('--mouse-y', y + '%');
-            });
-        });
-
-        // Scroll animation trigger
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.cyber-card, .project-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
+# Gade Kuldeep Sunil
+
+**Cybersecurity Student | SOC Operations | Threat Detection | Offensive Security**
+
+📍 Pune, India  
+
+🎓 B.E. Computer Engineering — Savitribai Phule Pune University (SPPU)
+
+---
+
+## About
+
+I’m a Computer Engineering student focused on **cybersecurity operations, threat detection, and offensive security techniques**.
+
+My approach to learning security is **hands-on and lab-driven**. Instead of only studying theory, I build environments where I can simulate attacks, detect threats, and analyze security events like a real SOC analyst.
+
+I maintain a **personal Red Team / Blue Team home lab** where I practice attack simulations, monitor alerts using SIEM tools, and document incidents in structured reports.
+
+My focus areas include:
+
+- SOC monitoring and incident analysis  
+
+- Threat detection and log investigation  
+
+- Network reconnaissance and exploitation  
+
+- Web vulnerability testing  
+
+- Security tooling and automation
+
+I actively practice cybersecurity challenges on **TryHackMe** and **PicoCTF** while continuing to expand my offensive and defensive security knowledge.
+
+---
+
+## Cybersecurity Projects
+
+### 🔴 AlertMatrix — Automated Domain Security Scanner
+
+A microservices-based security scanning platform that analyzes domains across multiple attack surfaces such as DNS configuration, SSL/TLS health, open ports, and HTTP security headers.
+
+The system generates **risk-scored security reports (0–100)** with severity levels and remediation recommendations.
+
+**Tech Stack**
+
+React (Vite)  
+
+Node.js / Express  
+
+Python / FastAPI  
+
+MongoDB  
+
+**Security Concepts**
+
+DNS security checks  
+
+TLS certificate analysis  
+
+Port scanning automation  
+
+OWASP-aligned security checks  
+
+Repository:  
+
+https://github.com/GadeKuldeep/AlertMatrix
+
+---
+
+### 🔵 Red-Blue-Team-Lab-Setup — Cybersecurity Home Lab
+
+A personal **Red Team vs Blue Team cybersecurity lab** built using VirtualBox that simulates real attack scenarios and SOC monitoring workflows.
+
+The Red Team performs attacks using common penetration testing tools, while the Blue Team monitors alerts and documents incidents using a SIEM platform.
+
+**Lab Components**
+
+Kali Linux (Attacker machine)  
+
+Ubuntu Server (Target system)  
+
+Wazuh SIEM for monitoring and alerting  
+
+DVWA for web exploitation practice  
+
+**Tools Used**
+
+Nmap  
+
+Metasploit  
+
+SQLmap  
+
+Hydra  
+
+Nikto  
+
+Every attack scenario is documented with structured **incident response reports**.
+
+Repository:  
+
+https://github.com/GadeKuldeep/Red-Blue-Team-Lab-Setup
+
+---
+
+### 🟡 PicoCTF Writeups & Practice
+
+A repository documenting my journey through Capture The Flag (CTF) challenges, focusing on practical cybersecurity skills, problem-solving, and real-world attack techniques.
+
+**Key Areas**
+
+Cryptography  
+Web Exploitation  
+Reverse Engineering  
+Binary Exploitation  
+Forensics  
+General Skills  
+
+**Highlights**
+
+Structured challenge writeups  
+Step-by-step solutions  
+Tools and techniques used  
+Beginner-friendly reference for CTF learners  
+
+Repository:  
+
+https://github.com/GadeKuldeep/PicoCTF
+
+---
+
+### 🟡 CyberDocii — Cybersecurity Documentation Platform
+
+A full-stack web application designed to organize structured cybersecurity documentation, research notes, and technical references.
+
+## 🎯 Use Cases
+
+- **CTF Write-ups** — Document challenge solutions step by step as you solve them
+
+- **Penetration Test Reports** — Structure recon → exploitation → post-exploitation workflows
+
+- **SOC Incident Documentation** — Log investigation steps with timestamped evidence
+
+- **Lab Setup Guides** — Build reproducible tutorials with command/output blocks
+
+**Tech Stack**
+
+React  
+
+Node.js / Express  
+
+MongoDB  
+
+Repository:  
+
+https://github.com/GadeKuldeep/CyberDocii
+
+---
+
+## Certifications
+
+Cisco CyberOps Associate — Cisco Networking Academy  
+
+Junior Cybersecurity Analyst — Cisco Networking Academy  
+
+Introduction to Cybersecurity — Cisco Networking Academy  
+
+Java Programming — NPTEL
+
+---
+
+## Technical Skills
+
+### Security Tools
+
+Nmap  
+
+Metasploit  
+
+Burp Suite  
+
+SQLmap  
+
+Hydra  
+
+Nikto  
+
+Wireshark  
+
+Wazuh SIEM  
+
+### Development
+
+Python  
+
+JavaScript  
+
+Node.js  
+
+React  
+
+Express  
+
+FastAPI  
+
+MongoDB  
+
+MySQL  
+
+### Platforms
+
+Kali Linux  
+
+Ubuntu Server  
+
+VirtualBox  
+
+Git  
+
+Postman  
+
+---
+
+## Cybersecurity Practice
+
+TryHackMe  
+
+PicoCTF  
+
+CTF challenges  
+
+Attack simulation labs  
+
+Security incident documentation
+
+---
+
+## Current Focus
+
+Expanding my SOC home lab environment  
+
+Practicing web exploitation and network analysis challenges  
+
+Developing security automation tools  
+
+Preparing for deeper offensive security research
+
+---
+
+## Connect
+
+LinkedIn  
+
+https://www.linkedin.com/in/kuldeep-gade-52598b2b0/
+
+TryHackMe  
+
+https://tryhackme.com/p/gadekuldeep25
+
+---
+
+"Understand the attack. Build the defense."
