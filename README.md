@@ -1,261 +1,199 @@
-# Gade Kuldeep Sunil
 
-**Cybersecurity Student | SOC Operations | Threat Detection | Offensive Security**
+# Hi, I'm Kuldeep 👋
 
-📍 Pune, India  
+### Cybersecurity Student | SOC Operations | Threat Detection | Offensive Security
 
-🎓 B.E. Computer Engineering — Savitribai Phule Pune University (SPPU)
+I'm a Computer Engineering student building practical cybersecurity projects to understand how attacks happen, how threats are detected, and how security teams respond to incidents.
 
----
+I learn by building labs, analyzing network traffic, investigating logs, and developing security-focused tools.
 
-## About
-
-I’m a Computer Engineering student focused on **cybersecurity operations, threat detection, and offensive security techniques**.
-
-My approach to learning security is **hands-on and lab-driven**. Instead of only studying theory, I build environments where I can simulate attacks, detect threats, and analyze security events like a real SOC analyst.
-
-I maintain a **personal Red Team / Blue Team home lab** where I practice attack simulations, monitor alerts using SIEM tools, and document incidents in structured reports.
-
-My focus areas include:
-
-- SOC monitoring and incident analysis  
-
-- Threat detection and log investigation  
-
-- Network reconnaissance and exploitation  
-
-- Web vulnerability testing  
-
-- Security tooling and automation
-
-I actively practice cybersecurity challenges on **TryHackMe** and **PicoCTF** while continuing to expand my offensive and defensive security knowledge.
+Currently, I'm working on improving my skills in **SOC Operations, Threat Detection, Network Security, Linux Administration, and Security Automation.**
 
 ---
 
-## Cybersecurity Projects
+## 🛡️ About Me
 
-### 🔴 AlertMatrix — Automated Domain Security Scanner
-
-A microservices-based security scanning platform that analyzes domains across multiple attack surfaces such as DNS configuration, SSL/TLS health, open ports, and HTTP security headers.
-
-The system generates **risk-scored security reports (0–100)** with severity levels and remediation recommendations.
-
-**Tech Stack**
-
-React (Vite)  
-
-Node.js / Express  
-
-Python / FastAPI  
-
-MongoDB  
-
-**Security Concepts**
-
-DNS security checks  
-
-TLS certificate analysis  
-
-Port scanning automation  
-
-OWASP-aligned security checks  
-
-Repository:  
-
-https://github.com/GadeKuldeep/AlertMatrix
+- 🎓 B.E. Computer Engineering — SPPU
+- 🔐 Cybersecurity Intern at UpToSkill
+- 🖥️ Interested in SOC Operations and Threat Detection
+- 🧪 Building isolated cybersecurity labs for attack simulation and detection
+- 🌐 Learning Network Security, Digital Forensics, and Offensive Security
+- 🤖 Exploring AI/ML applications in cybersecurity
+- 🚀 Learning through hands-on projects and continuous experimentation
 
 ---
 
-### 🔵 Red-Blue-Team-Lab-Setup — Cybersecurity Home Lab
+## 🔧 Technical Skills
 
-A personal **Red Team vs Blue Team cybersecurity lab** built using VirtualBox that simulates real attack scenarios and SOC monitoring workflows.
+### Cybersecurity & SOC
 
-The Red Team performs attacks using common penetration testing tools, while the Blue Team monitors alerts and documents incidents using a SIEM platform.
+- SIEM: Wazuh
+- IDS: Snort
+- Network Traffic Analysis
+- Log Analysis
+- Threat Detection
+- Incident Investigation
+- MITRE ATT&CK
+- Network Security
+- Security Monitoring
+- Firewall Configuration
 
-**Lab Components**
+### Offensive Security & Reconnaissance
 
-Kali Linux (Attacker machine)  
+- Kali Linux
+- Nmap
+- Hydra
+- Metasploit
+- Google Dorking
+- Reconnaissance
+- Web Application Security
+- DVWA
+- Wireshark
 
-Ubuntu Server (Target system)  
+### Programming & Development
 
-Wazuh SIEM for monitoring and alerting  
+- Python
+- Java
+- JavaScript
+- SQL
+- MERN Stack
+- Git & GitHub
 
-DVWA for web exploitation practice  
+### Operating Systems & Tools
 
-**Tools Used**
-
-Nmap  
-
-Metasploit  
-
-SQLmap  
-
-Hydra  
-
-Nikto  
-
-Every attack scenario is documented with structured **incident response reports**.
-
-Repository:  
-
-https://github.com/GadeKuldeep/Red-Blue-Team-Lab-Setup
-
----
-
-### 🟡 PicoCTF Writeups & Practice
-
-A repository documenting my journey through Capture The Flag (CTF) challenges, focusing on practical cybersecurity skills, problem-solving, and real-world attack techniques.
-
-**Key Areas**
-
-Cryptography  
-Web Exploitation  
-Reverse Engineering  
-Binary Exploitation  
-Forensics  
-General Skills  
-
-**Highlights**
-
-Structured challenge writeups  
-Step-by-step solutions  
-Tools and techniques used  
-Beginner-friendly reference for CTF learners  
-
-Repository:  
-
-https://github.com/GadeKuldeep/PicoCTF
+- Linux
+- Windows
+- UFW
+- VirtualBox
+- Wireshark
+- Wazuh
+- Snort
 
 ---
 
-### 🟡 CyberDocii — Cybersecurity Documentation Platform
+## 🚀 Featured Projects
 
-A full-stack web application designed to organize structured cybersecurity documentation, research notes, and technical references.
+### 🔴🔵 Red Blue Team Lab Setup
 
-## 🎯 Use Cases
+A hands-on, isolated cybersecurity lab designed to simulate attacks and practice defensive security operations.
 
-- **CTF Write-ups** — Document challenge solutions step by step as you solve them
+**What I worked on:**
+- Attack simulation using Kali Linux
+- Ubuntu server security monitoring
+- DVWA web application security testing
+- Wazuh SIEM deployment and monitoring
+- Snort IDS integration
+- Firewall configuration using UFW
+- Log analysis and incident investigation
+- MITRE ATT&CK mapping and incident reporting
 
-- **Penetration Test Reports** — Structure recon → exploitation → post-exploitation workflows
-
-- **SOC Incident Documentation** — Log investigation steps with timestamped evidence
-
-- **Lab Setup Guides** — Build reproducible tutorials with command/output blocks
-
-**Tech Stack**
-
-React  
-
-Node.js / Express  
-
-MongoDB  
-
-Repository:  
-
-https://github.com/GadeKuldeep/CyberDocii
+🔗 [View Project](https://github.com/GadeKuldeep/Red-Blue-Team-Lab-Setup)
 
 ---
 
-## Certifications
+### 🌐 Network Traffic Analysis Lab
 
-Cisco CyberOps Associate — Cisco Networking Academy  
+A practical network security project focused on packet analysis and investigating suspicious network activity using Wireshark.
 
-Junior Cybersecurity Analyst — Cisco Networking Academy  
+**What I worked on:**
+- PCAP analysis
+- Network protocol inspection
+- TCP/IP traffic analysis
+- DNS and HTTP investigation
+- Malware-related traffic analysis
+- Identifying suspicious communication patterns
+- Documenting investigation findings
 
-Introduction to Cybersecurity — Cisco Networking Academy  
-
-Java Programming — NPTEL
-
----
-
-## Technical Skills
-
-### Security Tools
-
-Nmap  
-
-Metasploit  
-
-Burp Suite  
-
-SQLmap  
-
-Hydra  
-
-Nikto  
-
-Wireshark  
-
-Wazuh SIEM  
-
-### Development
-
-Python  
-
-JavaScript  
-
-Node.js  
-
-React  
-
-Express  
-
-FastAPI  
-
-MongoDB  
-
-MySQL  
-
-### Platforms
-
-Kali Linux  
-
-Ubuntu Server  
-
-VirtualBox  
-
-Git  
-
-Postman  
+🔗 [View Project](https://github.com/GadeKuldeep/Network-Traffic-Analysis-Lab)
 
 ---
 
-## Cybersecurity Practice
+### 🔍 Google Dorking 2026
 
-TryHackMe  
+A practical reference guide covering Google search operators and advanced search techniques for information gathering and security reconnaissance.
 
-PicoCTF  
+**Focus areas:**
+- Advanced Google search operators
+- OSINT
+- Information gathering
+- Security reconnaissance
+- Public exposure awareness
+- Responsible and authorized security research
 
-CTF challenges  
-
-Attack simulation labs  
-
-Security incident documentation
-
----
-
-## Current Focus
-
-Expanding my SOC home lab environment  
-
-Practicing web exploitation and network analysis challenges  
-
-Developing security automation tools  
-
-Preparing for deeper offensive security research
+🔗 [View Project](https://github.com/GadeKuldeep/Google-Dorking-2026)
 
 ---
 
-## Connect
+### 🛡️ AlertMatrix
 
-LinkedIn  
+A web-based domain security scanning project focused on assessing website and domain security.
 
-https://www.linkedin.com/in/kuldeep-gade-52598b2b0/
+**Technology areas:**
+- React / Vite
+- Express
+- FastAPI
+- MongoDB
+- DNS security checks
+- SSL/TLS analysis
+- Security headers
+- Port scanning
+- Security reporting
 
-TryHackMe  
-
-https://tryhackme.com/p/gadekuldeep25
+🔗 [View Project](https://github.com/GadeKuldeep/AlertMatrix)
 
 ---
 
-"Understand the attack. Build the defense."
+## 🎯 Current Learning Focus
+
+```text
+SOC Operations
+    ↓
+Threat Detection & Investigation
+    ↓
+MITRE ATT&CK & TTP Analysis
+    ↓
+Digital Forensics
+    ↓
+Security Automation
+    ↓
+AI/ML for Cybersecurity
+```
+
+I'm focusing on understanding cybersecurity from both offensive and defensive perspectives, with a strong emphasis on practical implementation.
+
+---
+
+## 🧠 My Approach to Learning
+
+> Don't just learn the tool. Understand the problem it solves.
+
+I believe cybersecurity requires more than knowing commands. It requires understanding network behavior, recognizing suspicious activity, investigating evidence, and continuously improving detection and response.
+
+My goal is to keep building projects that connect technical knowledge with practical security operations.
+
+---
+
+## 📚 Areas I'm Exploring
+
+- SOC Analyst Workflows
+- SIEM & IDS Integration
+- Threat Hunting
+- Network Forensics
+- Windows Forensics
+- Incident Response
+- Python for Security Automation
+- AI-Based Intrusion Detection
+- SOAR
+- Cloud Security
+- Web Application Security
+
+---
+
+## 📫 Connect With Me
+
+- 💼 [LinkedIn](https://www.linkedin.com/)
+- 🐙 [GitHub](https://github.com/GadeKuldeep)
+
+---
+
+### Learn. Build. Investigate. Improve. 🔐
